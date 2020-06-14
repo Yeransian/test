@@ -1,0 +1,523 @@
+{% extends 'layout.html' %}
+{% set title='Home' %}
+{% block content %}
+<section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(../static/images/bg_1.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate mb-md-5">
+          	<span class="subheading">Development</span>
+            <h1 class="mb-4">Modern Website Applications to Improve Business Efficiency</h1>
+            <p><a href="{{ url_for('main.services') }}" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(../static/images/bg_2.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate mb-md-5">
+          	<span class="subheading">Automation</span>
+            <h1 class="mb-4">We Help to Cut Costs Through Automation of Tasks</h1>
+            <p><a href="{{ url_for('main.services') }}" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-consult">
+			<div class="container">
+				<div class="row d-flex no-gutters align-items-stretch	consult-wrap">
+					<div class="col-md-5 wrap-about align-items-stretch d-flex">
+						<div class="ftco-animate bg-primary align-self-stretch px-4 py-5 w-100">
+							<h2 class="heading-white mb-4">Free Consultation</h2>
+							<form action="#" class="appointment-form ftco-animate">
+		    				<div class="form-group">
+		    					<input type="text" id="first-name" class="form-control" placeholder="First Name">
+		    				</div>
+		    				<div class="form-group">
+		    					<input type="text" id="last-name" class="form-control" placeholder="Last Name">
+		    				</div>
+	    					<div class="form-group">
+		    					<div class="form-field">
+	        					<div class="select-wrap">
+	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                    <select name="s" id="service-list" class="form-control" >
+	                    	<option value="">Select Guidance</option>
+                                {% for service in services_list %}
+                                    <option value="{{ service }}" id="service">{{ service }}</option>
+                                {% endfor %}
+	                    </select>
+	                  </div>
+		              </div>
+                            </div>
+	    					<div class="form-group">
+		    					<input type="text" id="phone-number" class="form-control" placeholder="Phone">
+		    				</div>
+	    					<div class="form-group">
+		              <textarea name="m" id="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+		            </div>
+		            <div class="form-group">
+		              <input type="button" id="send-request" value="Request Consultation" class="btn btn-secondary py-3 px-4">
+		            </div>
+		    			</form>
+						</div>
+					</div>
+					<div class="col-md-7 wrap-about ftco-animate align-items-stretch d-flex">
+						<div class="bg-white p-5">
+							<h2 class="mb-4">Innoviuz <br>Development and Automation</h2>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="services">
+										<div class="icon mt-2 d-flex align-items-center"><span class="flaticon-collaboration"></span></div>
+										<div class="text media-body">
+											<h3>Web Application Development</h3>
+											<p>Improve Your Business Results by Creating a Modern Web Application.</p>
+										</div>
+									</div>
+									<div class="services">
+										<div class="icon mt-2"><span class="flaticon-analysis"></span></div>
+										<div class="text media-body">
+											<h3>Task Automation</h3>
+											<p>Cut Business Costs by Automating Routine Tasks.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="services">
+										<div class="icon mt-2"><span class="flaticon-search-engine"></span></div>
+										<div class="text media-body">
+											<h3>IT</h3>
+											<p>Improve Your Business Efficiency by Using The Latest Technologies.</p>
+										</div>
+									</div>
+									<div class="services">
+										<div class="icon mt-2"><span class="flaticon-handshake"></span></div>
+										<div class="text media-body">
+											<h3>SEO</h3>
+											<p>Get More Customers by Increasing Web Traffic.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-intro ftco-no-pb img" style="background-image: url(../static/images/bg_3.jpg);">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0">You Always Get the Best Guidance</h2>
+          </div>
+        </div>	
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
+			<div class="container consult-wrap">
+				<div class="row d-flex align-items-stretch">
+					<div class="col-md-6 wrap-about align-items-stretch d-flex">
+						<div class="img" style="background-image: url(../static/images/about.jpg);"></div>
+					</div>
+					<div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
+						<div class="heading-section mb-4">
+							<span class="subheading">Welcome to Innoviuz</span>
+							<h2>The Smartest Things To Do With Your Business</h2>
+						</div>
+						<p>We help businesses improve by delivering the latest services.</p>
+						<div class="tabulation-2 mt-4">
+							<ul class="nav nav-pills nav-fill d-md-flex d-block">
+							  <li class="nav-item">
+							    <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Our Mission</a>
+							  </li>
+							  <li class="nav-item px-lg-2">
+							    <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Our Vision</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link py-2" data-toggle="tab" href="#home3"><span class="ion-ios-mail mr-2"></span> Our Values</a>
+							  </li>
+							</ul>
+							<div class="tab-content bg-light rounded mt-2">
+							  <div class="tab-pane container p-0 active" id="home1">
+							  	<p>Our mission at Innoviuz Technologies is to help you get more out of your business.</p>
+							  </div>
+							  <div class="tab-pane container p-0 fade" id="home2">
+							  	<p>Our vision is to increase the efficiency and results for our clients.</p>
+							  </div>
+							  <div class="tab-pane container p-0 fade" id="home3">
+							  	<p>Honesty, Transparency, Discipline, Productivity</p>
+							  </div>
+							</div>
+						</div>
+    				<div class="row mt-5">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="54">0</strong>
+		                <span>Cups of Coffee</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="2">0</strong>
+		                <span>Clients</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="127">0</strong>
+		                <span>Hours</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+{#		<section class="ftco-section">#}
+{#			<div class="container">#}
+{#				<div class="row no-gutters justify-content-center mb-5">#}
+{#          <div class="col-md-6 text-center heading-section ftco-animate">#}
+{#          	<span class="subheading">Projects Done</span>#}
+{#            <h2 class="mb-4">Case Studies</h2>#}
+{#            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#            <p></p>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-1.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Consulting</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-2.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Marketing</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-3.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Financing</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-4.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Audit &amp; Taxes</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-5.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Financing</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+{#        	<div class="col-md-4">#}
+{#        		<div class="project">#}
+{#        			<div class="img rounded mb-4" style="background-image: url(../static/images/project-6.jpg);"></div>#}
+{#        			<div class="text w-100 text-center">#}
+{#        				<span class="cat">Real Estate</span>#}
+{#        				<h3><a href="#">Consultacy Solutions</a></h3>#}
+{#        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#        			</div>#}
+{#        		</div>#}
+{#        	</div>#}
+        </div>
+			</div>
+		</section>
+
+    <section class="ftco-section ftco-no-pt">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">Services</span>
+            <h2 class="mb-4">Why Choose Us?</h2>
+            <p>We care about you and your business, that is why all of our services are focused on helping your business run more efficient and optimizing your business for potential growth.</p>
+          </div>
+        </div>
+  			<div class="row tabulation mt-4 ftco-animate">
+  				<div class="col-md-4">
+						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
+						  <li class="nav-item text-left">
+						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span>Web Development</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span>Business Automation</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span>Data Analytics</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-money mr-2"></span>IT Services</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-5"><span class="flaticon-rating mr-2"></span>SEO Optimization</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-6"><span class="flaticon-search-engine mr-2"></span> Marketing/Social Media</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="col-md-8">
+						<div class="tab-content">
+						  <div class="tab-pane container p-0 active" id="services-1">
+						  	<div class="img" style="background-image: url(../static/images/project-2.jpg);"></div>
+						  	<h3><a href="#">Web Application Development</a></h3>
+						  	<p>We provide website and web application development. Do you have features you would like to have on your website or a web application startup idea? We can help.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-2">
+						  	<div class="img" style="background-image: url(../static/images/project-3.jpg);"></div>
+						  	<h3><a href="#">Automation of Tasks</a></h3>
+						  	<p>Cut costs and save time by automating the redundant tasks of your day to day business.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-3">
+						  	<div class="img" style="background-image: url(../static/images/project-4.jpg);"></div>
+						  	<h3><a href="#">Analytics of Data</a></h3>
+						  	<p>Today is the age of data analytics. We can help analyze your business data and provide understandable reports to help you make decisions and improve business efficiency.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-4">
+						  	<div class="img" style="background-image: url(../static/images/project-5.jpg);"></div>
+						  	<h3><a href="#">IT Infrastructure</a></h3>
+						  	<p>Improve your IT Infrastructure and its efficiency. We can help lower costs and make IT less of a burden.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-5">
+						  	<div class="img" style="background-image: url(../static/images/project-6.jpg);"></div>
+						  	<h3><a href="#">Search Engine Optimization</a></h3>
+						  	<p>SEO is a major overlooked component that can increase customer traffic. We can help you get on the map and increase your views to potential customers with search engine optimization.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-6">
+						  	<div class="img" style="background-image: url(../static/images/project-1.jpg);"></div>
+						  	<h3><a href="#">Marketing and Social Media Management</a></h3>
+						  	<p>Marketing and managing social media accounts can be a confusing and time consuming task. For marketing, we analyze your client base, and pick the most cost efficient channel to market your business. We help get your business reach more potential clients by managing social media accounts and blogs. Everything we do or post has to be reviewed and approved by you first.</p>
+						  </div>
+						</div>
+					</div>
+				</div>
+    	</div>
+    </section>
+
+    <section class="ftco-intro ftco-no-pb img" style="background-image: url(../static/images/bg_1.jpg);">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-lg-9 col-md-8 d-flex align-items-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-3 mb-md-0">Your Businesses Efficiency and Growth at Heart</h2>
+          </div>
+          <div class="col-lg-3 col-md-4 ftco-animate">
+          	<p class="mb-0"><a href="#" class="btn btn-secondary py-3 px-4">Free Consultation</a></p>
+          </div>
+        </div>	
+    	</div>
+    </section>
+
+{#    <section class="ftco-section testimony-section">#}
+{#      <div class="container-fluid px-md-5">#}
+{#        <div class="row justify-content-center mb-5">#}
+{#          <div class="col-md-8 text-center heading-section ftco-animate">#}
+{#          	<span class="subheading">Testimonies</span>#}
+{#            <h2 class="mb-4">Our Clients Says</h2>#}
+{#            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="row ftco-animate justify-content-center">#}
+{#          <div class="col-md-12">#}
+{#            <div class="carousel-testimony owl-carousel">#}
+{#              <div class="item">#}
+{#                <div class="testimony-wrap d-flex">#}
+{#                  <div class="user-img" style="background-image: url(../static/images/person_1.jpg)">#}
+{#                  </div>#}
+{#                  <div class="text pl-4">#}
+{#                  	<span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                    <p class="name">Racky Henderson</p>#}
+{#                    <span class="position">Father</span>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="item">#}
+{#                <div class="testimony-wrap d-flex">#}
+{#                  <div class="user-img" style="background-image: url(../static/images/person_2.jpg)">#}
+{#                  </div>#}
+{#                  <div class="text pl-4">#}
+{#                  	<span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                    <p class="name">Henry Dee</p>#}
+{#                    <span class="position">Businesswoman</span>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="item">#}
+{#                <div class="testimony-wrap d-flex">#}
+{#                  <div class="user-img" style="background-image: url(../static/images/person_3.jpg)">#}
+{#                  </div>#}
+{#                  <div class="text pl-4">#}
+{#                  	<span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                    <p class="name">Mark Huff</p>#}
+{#                    <span class="position">Businesswoman</span>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="item">#}
+{#                <div class="testimony-wrap d-flex">#}
+{#                  <div class="user-img" style="background-image: url(../static/images/person_4.jpg)">#}
+{#                  </div>#}
+{#                  <div class="text pl-4">#}
+{#                  	<span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                    <p class="name">Rodel Golez</p>#}
+{#                    <span class="position">Businesswoman</span>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="item">#}
+{#                <div class="testimony-wrap d-flex">#}
+{#                  <div class="user-img" style="background-image: url(../static/images/person_1.jpg)">#}
+{#                  </div>#}
+{#                  <div class="text pl-4">#}
+{#                  	<span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                    <p class="name">Ken Bosh</p>#}
+{#                    <span class="position">Businesswoman</span>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+
+    <hr>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">Blog Posts</span>
+            <h2 class="mb-4">Recent Blog</h2>
+            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+          </div>
+        </div>
+				<div class="row">
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('../static/images/image_1.jpg');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">15</span>
+                  <span class="mos">Oct.</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text border border-top-0 p-4">
+                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('../static/images/image_2.jpg');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">15</span>
+                  <span class="mos">Oct.</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text border border-top-0 p-4">
+                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('../static/images/image_3.jpg');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">15</span>
+                  <span class="mos">Oct.</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text border border-top-0 p-4">
+                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+{% endblock %}
+{% block custom_scripts %}
+          <script src="../static/js/custom.js" type="text/javascript"></script>
+{% endblock %}
