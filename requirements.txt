@@ -126,7 +126,7 @@ packaging==19.0
 pandas==1.0.1
 pandas-datareader==0.8.1
 pandocfilters==1.4.2
-paramiko==2.6.0
+paramiko==2.10.1
 parso==0.3.4
 partd==0.3.10
 Paste==3.3.0
